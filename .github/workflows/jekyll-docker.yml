@@ -17,6 +17,10 @@ jobs:
       with:
         node-version: '16'
 
+    - name: enter docs
+      run: |
+        cd docs
+
     - name: Install and Build
       run: |
         npm install
@@ -26,6 +30,6 @@ jobs:
       uses: JamesIves/github-pages-deploy-action@4.1.9
       with:
         branch: ph-page
-        FOLDER: docs/.vuepress/dist
+        FOLDER: docs/docs/.vuepress/dist
         token: ${{ secrets.ACCESS_TOKEN }}
         CLEAN: true
