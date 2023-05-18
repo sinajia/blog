@@ -1,7 +1,8 @@
 module.exports = {
   title: '加油',
   description: '加油的博客',
-  base: '/blog/',
+  // base: '/blog/',
+  base: '/',
   head: [
     [
       'link',
