@@ -17,14 +17,12 @@ jobs:
       with:
         node-version: '16'
 
-    - name: enter docs
-      run: |
-        cd docs
-
     - name: Install and Build
       run: |
+        cd docs
         npm install
         npm run docs:build
+        cd ..
 
     - name: Deploy
       uses: JamesIves/github-pages-deploy-action@4.1.9
